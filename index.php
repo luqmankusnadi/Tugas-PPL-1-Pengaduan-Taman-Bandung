@@ -125,21 +125,21 @@
 				cantik Tohsaka Rin buat penyemangat hidup lu wkwkwk</p>
 			</div>
 			<div class="col-sm-6">
-				<form role="form">
+				<form role="form" method="post" action="insertpost.php">
 					<div class="form-group">
 						<label for="selected_taman">Pilih Taman:</label>
-						<select class="form-control" id="selected_taman">
-							<option>Taman Jomblo</option>
-							<option>Taman Film</option>
-							<option>Taman Foto</option>
+						<select class="form-control" id="selected_taman" name="selected_taman">
+							<option value="1"<?php echo(isset($_POST['selected_taman'])&&($_POST['selected_taman']=='1')?' selected="selected"':'');?>>Taman Jomblo</option>
+							<option value="2"<?php echo(isset($_POST['selected_taman'])&&($_POST['selected_taman']=='2')?' selected="selected"':'');?>>Taman Film</option>
+							<option value="3"<?php echo(isset($_POST['selected_taman'])&&($_POST['selected_taman']=='3')?' selected="selected"':'');?>>Taman Foto</option>
 						</select>
 					</div>
 					<div class="form-group">
 						<label for="selected_aduan">Pilih Jenis Aduan:</label>
-						<select class="form-control" id="selected_aduan">
-							<option>Kebersihan</option>
-							<option>Keamanan</option>
-							<option>Infrastruktur</option>
+						<select class="form-control" id="selected_aduan" name="selected_aduan">
+						<option value="Keamanan"<?php echo(isset($_POST['selected_aduan'])&&($_POST['selected_aduan']=='Kebersihan')?' selected="selected"':'');?>>Kebersihan</option>
+						<option value="Kebersihan"<?php echo(isset($_POST['selected_aduan'])&&($_POST['selected_aduan']=='Keamanan')?' selected="selected"':'');?>>Keamanan</option>
+						<option value="Infrastruktur"<?php echo(isset($_POST['selected_aduan'])&&($_POST['selected_aduan']=='Infrastruktur')?' selected="selected"':'');?>>Infrastruktur</option>
 						</select>
 					</div>
 					<div class="form-group">
@@ -150,7 +150,7 @@
 					</div>
 					<div class="form-group">
 						<label for="komentar">Komentar:</label>
-						<textarea class="form-control" rows="5" id="komentar" placeholder="Masukan komentar" required data-validation-required-message="Masukan Komentar!"></textarea>
+						<textarea class="form-control" rows="5" name="komentar" id="komentar" placeholder="Masukan komentar" required data-validation-required-message="Masukan Komentar!"></textarea>
 					</div>
 					<button type="submit" class="btn btn-info">Lapor!</button>
 				</form>
@@ -167,6 +167,15 @@
     <script src="dist/js/bootstrap.min.js"></script>
 	
 	<script src="dist/js/fileinput.min.js"></script>
+	
+	<script>
+	function tes(){
+		var jenis_pengaduan = document.getElementById("selected_aduan");
+		var komentar = document.getElementById("komentar");
+		alert('isi jenis pengaduan: ' + jenis_pengaduan + ' komentar: ' + komentar);
+		return false;
+	}
+	</script>
 
 	<script>
 	$("#input-24").fileinput({
