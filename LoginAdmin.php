@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <head>
       <title>Login</title>
+	  <style>
+    body {
+        font-size:12px;
+        font-family:Arial, Helvetica, sans-serif;
+        color:#666;
+    }
+    .box_register strong {
+        display:block;
+        padding-bottom:3px;
+        padding-top:8px;
+    }
+    .box_register input.form_2
+    {
+        border:1px solid #999;
+        padding:6px;
+        font:normal 12px arial;
+        color:#333;
+        width:300px;
+    }
+    .box_register img {
+        border:1px solid #E9E9E9;
+    }
+</style>
 </head>
 <body>
 	<table width="300" border="5" align="center" cellpadding="4" cellspacing="1" bgcolor="#CCCCCC">

@@ -24,17 +24,14 @@
 	
 	  <div class="container">
 		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<img src="img/Logo_PemkotBdg.PNG" align="center" style="width:100px;height:100px">
-			 <div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav navbar-center">
-				<li><a href="#">Left</a></li>
-				<li><a href="#about">Left</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-center">
-			  <li><a href="#about">Right</a></li>
-			  <li><a href="#contact">Right</a></li>
-			</ul>
-  </div>
+			<div id="navbar" class="navbar-collapse collapse">
+ 			  <ul class="nav navbar-nav">
+ 				<li class="active"><a href="#">Beranda</a></li>
+-				<li><a href="#admin">Admin</a></li>
+				<li><a href="FormAduan.php">LAPOR</a></li>
+ 				<li><a href="#About">Tentang</a></li>
+ 			  </ul>
+ 			</div>
 		</nav>
 	  </div>
 	  

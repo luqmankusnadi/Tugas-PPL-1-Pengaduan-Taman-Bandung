@@ -1,5 +1,5 @@
 <?php
-include "connect.php";
+require_once "connect.php";
 
 $table = "post";
 
@@ -12,14 +12,12 @@ if (!mysqli_query($con,$sql)) {
   die('Error: ' . mysqli_error($con));
 }
 	
-	$url = "index.php";
-	
-	function redirect($url,$statusCode = 303)
-	{
-		header ('Location: ' . $url, true,$statusCode);
-		die();
-	}
-	redirect($url);
+$url = "index.php";
 
-
+function redirect($url,$statusCode = 303)
+{
+	header ('Location:.../ ' . $url, true,$statusCode);
+	die();
+}
+redirect($url);
 ?>
