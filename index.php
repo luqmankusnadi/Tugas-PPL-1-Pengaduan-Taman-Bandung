@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<html>
+
 <head>
 	<title>Pengaduan Taman Bandung</title>
 	<meta charset="utf-8">
@@ -38,8 +40,8 @@
 			<div id="navbar" class="navbar-collapse collapse">
 			  <ul class="nav navbar-nav">
 				<li class="active"><a href="#">Beranda</a></li>
-				<li><a href="admin">Admin</a></li>
-				<li><a href="#About">Tentang</a></li>
+				<li><a href="admin.php">Admin</a></li>
+				<li><a href="about.php">Tentang</a></li>
 			  </ul>
 			</div>
 		  </div>
@@ -152,7 +154,7 @@
 						<label for="komentar">Komentar:</label>
 						<textarea class="form-control" rows="5" id="komentar" placeholder="Masukan komentar" required data-validation-required-message="Masukan Komentar!"></textarea>
 					</div>
-					<button type="submit" class="btn btn-info">Lapor!</button>
+					<button type="submit" class="btn btn-primary">Lapor!</button>
 				</form>
 			</div>
 		</div>
