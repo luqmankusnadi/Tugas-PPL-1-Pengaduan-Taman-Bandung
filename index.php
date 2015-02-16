@@ -42,7 +42,6 @@
 			  <ul class="nav navbar-nav">
 				<li class="active"><a href="index.php">Beranda</a></li>
 				<li><a href="admin.php">Admin</a></li>
-				<li><a href="FormAduan.php">Lapor</a></li>
 				<li><a href="about.php">Tentang</a></li>
 			  </ul>
 			<?php

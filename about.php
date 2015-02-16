@@ -55,6 +55,45 @@
 		  </div>
 		</nav>
 	  </div>
+	  <div class="jumbotron">
+		  <div class="container">
+			<h2>Developer</h2>
+			  <div class="row">
+				<div class="col-md-4">
+				  <a href="https://www.facebook.com/IF092?fref=ts" class="thumbnail">
+					<p>Reinaldo Michael Hasian</p>    
+					<img src="img/aldo.jpg" alt="aldo" style="width:200px;height:200px">
+				  </a>
+				</div>
+				<div class="col-md-4">
+				  <a href="https://www.facebook.com/mariotejuzar?fref=ts" class="thumbnail">
+					<p>Mario Tressa Juzar</p>
+					<img src="img/mario.jpg" alt="mario" style="width:200px;height:200px">
+				  </a>
+				</div>
+				<div class="col-md-4">
+				  <a href="https://www.facebook.com/danang.hudaya?fref=ts" class="thumbnail">
+					<p>Danang Afnan Hudaya</p>      
+					<img src="img/danang.jpg" alt="danang" style="width:150px;height:200px">
+				  </a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+				  <a href="https://www.facebook.com/luqmanfaizlani.kusnadi?fref=ts" class="thumbnail">
+					<p>Luqman Faizlani Kusnadi</p>    
+					<img src="img/luqman.jpg" alt="aldo" style="width:280px;height:180px">
+				  </a>
+				</div>
+				<div class="col-md-6">
+				  <a href="https://www.facebook.com/Ichwanharyosembodo" class="thumbnail">
+					<p>Ichwan Haryo Sembodo</p>
+					<img src="img/ichwan.png" alt="mario" style="width:180px;height:180px">
+				  </a>
+				</div>
+			</div>
+		  </div>
+	  </div>
 	  
 	<!-- selesai navigasi bar halaman -->
 	  
