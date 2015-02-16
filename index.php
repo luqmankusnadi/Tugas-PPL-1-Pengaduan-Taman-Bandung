@@ -31,7 +31,7 @@
 			<div id="navbar" class="navbar-collapse collapse">
  			  <ul class="nav navbar-nav">
  				<li class="active"><a href="#">Beranda</a></li>
--				<li><a href="#admin">Admin</a></li>
+-				<li><a href="admin.php">Admin</a></li>
 				<li><a href="FormAduan.php">LAPOR</a></li>
  				<li><a href="#About">Tentang</a></li>
  			  </ul>

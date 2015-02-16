@@ -5,7 +5,7 @@
 	}
 	$username = mysqli_real_escape_string($con, $_POST['inputUsername']);
 	$password = mysqli_real_escape_string($con, $_POST['inputPassword']);
-	$result = mysqli_query($con,"SELECT * FROM petugas WHERE username='$username' AND password='$password'");
+	$result = mysqli_query($con,"SELECT * FROM petugas_taman WHERE username='$username' AND password='$password'");
 	$num_rows = mysqli_num_rows($result);
 	if($num_rows < 1)
 	{
@@ -88,10 +88,11 @@
 					$num = 0;
 					while($row = mysqli_fetch_array($result)) {
 						$namaTaman = mysqli_fetch_array(mysqli_query($con,"SELECT nama FROM taman WHERE id='$row[id_taman]'"))['nama'];
+						$jenisTaman = mysqli_fetch_array(mysqli_query($con,"SELECT nama_kategori FROM jenis_pengaduan WHERE id='$row[id_jenis_pengaduan]'"))['nama_kategori'];
 						echo "<tr>";
 						echo "<td>".++$num."</td>";
 						echo "<td>".$namaTaman."</td>";
-						echo "<td>".$row['jenis_pengaduan']."</td>";
+						echo "<td>".$jenisTaman."</td>";
 						echo "<td>".$row['komentar']."</td>";
 						echo "</tr>";
 					}
