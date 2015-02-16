@@ -45,6 +45,24 @@
 				<li><a href="FormAduan.php">Lapor</a></li>
 				<li><a href="about.php">Tentang</a></li>
 			  </ul>
+			<?php
+			session_start();
+			if(isset($_SESSION["id_petugas"]))
+			{
+				$con=mysqli_connect("localhost","root","","pengaduan_taman");
+				if (mysqli_connect_errno()) {
+					echo "Failed to connect to MySQL: " . mysqli_connect_error();
+				}
+				$result = mysqli_query($con,"SELECT * FROM petugas_taman WHERE id='".$_SESSION["id_petugas"]."'");
+				$nama_admin = mysqli_fetch_array($result)['nama'];
+				echo"
+					<ul class='nav navbar-nav navbar-right'>
+					<li><a>".$nama_admin."</a></li>
+					<li><a href='logout.php'>logout</a></li>
+					</ul>
+					";
+			}
+			?>
 			</div>
 		  </div>
 		</nav>
