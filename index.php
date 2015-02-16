@@ -2,6 +2,7 @@
 
 <html>
 
+
 <head>
 	<title>Pengaduan Taman Bandung</title>
 	<meta charset="utf-8">
@@ -27,24 +28,14 @@
 	
 	  <div class="container">
 		<nav class="navbar navbar-inverse navbar-fixed-top">
-		  <div class="container">
-			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
-			  <a class="navbar-brand" href="#">Pengaduan Taman Bandung</a>
-			</div>
 			<div id="navbar" class="navbar-collapse collapse">
-			  <ul class="nav navbar-nav">
-				<li class="active"><a href="#">Beranda</a></li>
-				<li><a href="admin.php">Admin</a></li>
-				<li><a href="about.php">Tentang</a></li>
-			  </ul>
-			</div>
-		  </div>
+ 			  <ul class="nav navbar-nav">
+ 				<li class="active"><a href="#">Beranda</a></li>
+-				<li><a href="#admin">Admin</a></li>
+				<li><a href="FormAduan.php">LAPOR</a></li>
+ 				<li><a href="#About">Tentang</a></li>
+ 			  </ul>
+ 			</div>
 		</nav>
 	  </div>
 	  
@@ -121,38 +112,44 @@
 	
 	<div class="jumbotron">
 		<div class="container">
-			<h1>Jombloers!</h1>
 			<div class="col-sm-6">
+			<h1>Jombloers!</h1>
 				<p>hai para jomblo, gimana kabar kalian? sehat? jangan lupa makan, jangan main game terus haha. Noh udah gw kasih gambar-gambar
 				cantik Tohsaka Rin buat penyemangat hidup lu wkwkwk</p>
 			</div>
 			<div class="col-sm-6">
-				<form role="form">
+				<form role="form" method="post" action="insertpost.php">
 					<div class="form-group">
-						<label for="selected_taman">Pilih Taman:</label>
-						<select class="form-control" id="selected_taman">
-							<option>Taman Jomblo</option>
-							<option>Taman Film</option>
-							<option>Taman Foto</option>
+						<label for="selected_taman">Pilih Taman :</label>
+						<?php
+						$daftar_taman = getDaftarTaman();
+						?>
+						<select class="form-control" id="selected_taman" name="selected_taman">
+							<?php for($x=1; $x<count($daftar_taman); $x++) { ?>
+							<option value="<?php $daftar_taman[$x]; ?>"><?php echo $daftar_taman[$x]; ?></option>
+							<?php } ?>
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="selected_aduan">Pilih Jenis Aduan:</label>
-						<select class="form-control" id="selected_aduan">
-							<option>Kebersihan</option>
-							<option>Keamanan</option>
-							<option>Infrastruktur</option>
+						<label for="selected_aduan">Pilih Jenis Aduan :</label>
+						<?php
+						$jns_pengaduan = getJenisPengaduan();
+						?>
+						<select class="form-control" id="selected_aduan" name="selected_aduan">
+							<?php for($x=1; $x<count($jns_pengaduan); $x++) { ?>
+							<option value="<?php $jns_pengaduan[$x]; ?>"><?php echo $jns_pengaduan[$x]; ?></option>
+							<?php } ?>
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="foto">Foto:</label>
+						<label for="foto">Foto :</label>
 						
 						<input id="input-24" type="file" multiple="true">
 
 					</div>
 					<div class="form-group">
 						<label for="komentar">Komentar:</label>
-						<textarea class="form-control" rows="5" id="komentar" placeholder="Masukan komentar" required data-validation-required-message="Masukan Komentar!"></textarea>
+						<textarea class="form-control" rows="5" name="komentar" id="komentar" placeholder="Masukan komentar" required data-validation-required-message="Masukan Komentar!"></textarea>
 					</div>
 					<button type="submit" class="btn btn-primary">Lapor!</button>
 				</form>
@@ -169,6 +166,53 @@
     <script src="dist/js/bootstrap.min.js"></script>
 	
 	<script src="dist/js/fileinput.min.js"></script>
+	
+	<?php
+		function getJenisPengaduan() {
+			$arr_jenis_pengaduan[]=NULL;
+			$con=mysqli_connect("localhost","root","","pengaduan_taman");
+			if (mysqli_connect_errno()) {
+			  echo "Error saat mengakses tabel pengaduan_taman : " . mysqli_connect_error();
+			}
+			$result = mysqli_query($con,"SELECT * FROM jenis_pengaduan");
+			if($result->num_rows <= 1) {
+			  echo "Error Tabel Jenis_Pengaduan Kosong" . mysqli_connect_error();
+			}
+			while($row = mysqli_fetch_array($result)) {
+				$temp=$row['nama_kategori'];
+				$arr_jenis_pengaduan[] = $temp;
+			}
+			return $arr_jenis_pengaduan;
+		}
+	?>
+	
+	<?php
+		function getDaftarTaman() {
+			$arr_daftar_taman[]=NULL;
+			$con=mysqli_connect("localhost","root","","pengaduan_taman");
+			if (mysqli_connect_errno()) {
+			  echo "Error saat mengakses tabel taman : " . mysqli_connect_error();
+			}
+			$result = mysqli_query($con,"SELECT * FROM taman");
+			if($result->num_rows <= 1) {
+			  echo "Error Tabel Taman Kosong" . mysqli_connect_error();
+			}
+			while($row = mysqli_fetch_array($result)) {
+				$temp=$row['nama'];
+				$arr_daftar_taman[] = $temp;
+			}
+			return $arr_daftar_taman;
+		}
+	?>
+	
+	<script>
+	function tes(){
+		var jenis_pengaduan = document.getElementById("selected_aduan");
+		var komentar = document.getElementById("komentar");
+		alert('isi jenis pengaduan: ' + jenis_pengaduan + ' komentar: ' + komentar);
+		return false;
+	}
+	</script>
 
 	<script>
 	$("#input-24").fileinput({
