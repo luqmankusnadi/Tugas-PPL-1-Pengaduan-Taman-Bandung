@@ -17,7 +17,7 @@
 		  margin: auto;
 	  }
 	  .item{
-		height: 400px;
+		height: 450px;
 	  }	
 	</style>
 </head>
@@ -61,46 +61,73 @@
 		  <li data-target="#myCarousel" data-slide-to="1"></li>
 		  <li data-target="#myCarousel" data-slide-to="2"></li>
 		  <li data-target="#myCarousel" data-slide-to="3"></li>
+		  <li data-target="#myCarousel" data-slide-to="4"></li>
+		  <li data-target="#myCarousel" data-slide-to="5"></li>
+		  <li data-target="#myCarousel" data-slide-to="6"></li>
+		  <li data-target="#myCarousel" data-slide-to="7"></li>
 		</ol>
 
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner" role="listbox">
 		  <div class="item active">
-			<img src="img/img_1.jpg" alt="First-slide">
+			<img src="img/taman-film.jpg" alt="First-slide">
 			<div class="container">
 				<div class="carousel-caption">
-					<h1>Tohsaka Rin</h1>
-					<p>Fate Stay Night Unlimited Blade Works</p>
+					<h1>Taman Film</h1>
 				</div>
 			</div>
 		  </div>
 
 		  <div class="item">
-			<img src="img/img_2.jpg" alt="Second-slide">
+			<img src="img/taman-fotografi.jpg" alt="Second-slide">
 			<div class="container">
 				<div class="carousel-caption">
-					<h1>Tohsaka Rin</h1>
-					<p>Fate Stay Night Unlimited Blade Works</p>
+					<h1>Taman Fotografi</h1>
 				</div>
 			</div>
 		  </div>
 		
 		  <div class="item">
-			<img src="img/img_3.jpg" alt="Third-slide">
+			<img src="img/taman-jomblo.jpg" alt="Third-slide">
 			<div class="container">
 				<div class="carousel-caption">
-					<h1>Arthuria</h1>
-					<p>Fate Stay Night Unlimited Blade Works</p>
+					<h1>Taman Jomblo</h1>
 				</div>
 			</div>
 		  </div>
 
 		  <div class="item">
-			<img src="img/img_4.jpg" alt="Fourth-slide">
+			<img src="img/taman-lansia.jpg" alt="Fourth-slide">
 			<div class="container">
 				<div class="carousel-caption">
-					<h1>Tohsaka Rin & Emiya Shirou</h1>
-					<p>Fate Stay Night Unlimited Blade Works</p>
+					<h1>Taman Lansia</h1>
+				</div>
+			</div>
+		  </div>
+		  
+		  <div class="item">
+			<img src="img/taman-musik.png" alt="Fifth-slide">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Taman Musik</h1>
+				</div>
+			</div>
+		  </div>
+		  
+		  <div class="item">
+			<img src="img/taman-persib.jpg" alt="Sixth-slide">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Taman Persib</h1>
+				</div>
+			</div>
+		  </div>
+		  
+		  <div class="item">
+			<img src="img/taman-pustaka-bunga.jpg" alt="Seventh-slide">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Taman Pustaka Bunga</h1>
 				</div>
 			</div>
 		  </div>
