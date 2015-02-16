@@ -1,3 +1,12 @@
+<?php
+	session_start();
+	if(isset($_SESSION["id_petugas"]))
+	{
+		header("Location: validasi.php");
+		die();
+	};
+?>
+
 <!DOCTYPE html>
 
 <html>
