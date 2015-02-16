@@ -28,14 +28,25 @@
 	
 	  <div class="container">
 		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">Pengaduan Taman Bandung</a>
+			</div>
 			<div id="navbar" class="navbar-collapse collapse">
- 			  <ul class="nav navbar-nav">
- 				<li class="active"><a href="#">Beranda</a></li>
--				<li><a href="admin.php">Admin</a></li>
-				<li><a href="FormAduan.php">LAPOR</a></li>
- 				<li><a href="#About">Tentang</a></li>
- 			  </ul>
- 			</div>
+			  <ul class="nav navbar-nav">
+				<li class="active"><a href="index.php">Beranda</a></li>
+				<li><a href="admin.php">Admin</a></li>
+				<li><a href="FormAduan.php">Lapor</a></li>
+				<li><a href="about.php">Tentang</a></li>
+			  </ul>
+			</div>
+		  </div>
 		</nav>
 	  </div>
 	  
