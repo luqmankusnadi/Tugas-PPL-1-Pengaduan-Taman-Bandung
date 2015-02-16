@@ -38,7 +38,7 @@
 
 <!-- jumbotron + form pengaduan -->
 
-<div>
+<div style="margin-top:50px">
 	<div class="container">
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4">
@@ -104,15 +104,7 @@
 	
 	<script src="dist/js/fileinput.min.js"></script>
 	
-	<?php
-		if(isset($_POST['back_btn'])) {
-			header ('Location: index.php');
-		}
-		
-		if(isset($_POST['back_btn'])) {
-			header ('Location: index.php');
-		}
-		
+	<?php		
 		function getJenisPengaduan() {
 			$arr_jenis_pengaduan[]=NULL;
 			$con=mysqli_connect("localhost","root","","pengaduan_taman");

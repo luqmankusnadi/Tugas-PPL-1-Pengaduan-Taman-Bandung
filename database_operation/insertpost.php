@@ -2,6 +2,10 @@
 require_once "connect.php";
 
 $url = "index.php";
+if(isset($_POST['back_btn'])) {
+	redirect($url);
+}
+
 $table = "pengaduan";
 $komentar = mysqli_real_escape_string($con,$_POST['komentar']);
 //$foto=addslashes(file_get_contents($_FILES['foto-taman']['tmp_name']));

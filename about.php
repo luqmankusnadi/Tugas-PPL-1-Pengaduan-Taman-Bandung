@@ -8,7 +8,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="dist/css/fileinput.min.css" rel="stylesheet">
-	
+	<style>
+		tes {
+			margin-left: auto;
+			margin-right: auto;
+			width : 600px;
+		}
+	</style>
 </head> 
 
 <body>
@@ -96,7 +102,102 @@
 	  </div>
 	  
 	<!-- selesai navigasi bar halaman -->
-	  
+	
+	<!-- image slider make carousel -->	  
+	<br><br>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+		  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		  <li data-target="#myCarousel" data-slide-to="1"></li>
+		  <li data-target="#myCarousel" data-slide-to="2"></li>
+		  <li data-target="#myCarousel" data-slide-to="3"></li>
+		  <li data-target="#myCarousel" data-slide-to="4"></li>
+		  <li data-target="#myCarousel" data-slide-to="5"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+		  <div class="item active" style="margin:15px 0px 0px 0px">
+			<img src="img/geje/ghajebo.png" alt="First-slide" style="width : 400px;margin-left: auto;margin-right: auto;margin-top: auto">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>GHAJEBO</h1>
+					<p>avenger</p>
+				</div>
+			</div>
+		  </div>
+		  
+		  <div class="item" style="margin:15px 0px 0px 0px">
+			<img src="img/geje/alvin.png" alt="First-slide" style="width : 400px;margin-left: auto;margin-right: auto;margin-top: auto">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>300 LBS</h1>
+					<p>legendary sixpack man</p>
+				</div>
+			</div>
+		  </div>
+
+		  <div class="item" style="margin:15px 0px 0px 0px">
+			<img src="img/geje/ip-man-4.png" alt="Second-slide" style="width : 400px;margin-left: auto;margin-right: auto;margin-top: auto">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Ip Man 4</h1>
+					<p>based on true story</p>
+				</div>
+			</div>
+		  </div>
+		
+		  <div class="item" style="margin:15px 0px 0px 0px">
+			<img src="img/geje/puja-biokonda.png" alt="Third-slide" style="width : 400px;margin-left: auto;margin-right: auto;margin-top: auto">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>BioKonda</h1>
+					<p>lost in amazon</p>
+				</div>
+			</div>
+		  </div>
+		  
+		  <div class="item" style="margin:15px 0px 0px 0px">
+			<img src="img/geje/ganja-air.png" alt="Fifth-slide" style="width : 400px;margin-left: auto;margin-right: auto;margin-top: auto">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Ganja Air</h1>
+					<p>we make people fly</p>
+				</div>
+			</div>
+		  </div>
+		  
+		  <div class="item" style="margin:15px 0px 0px 0px">
+			<img src="img/geje/biodiesel.jpg" alt="Seventh-slide" style="width : 400px;margin-left: auto;margin-right: auto;margin-top: auto">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Biodiesel</h1>
+					<p>alternative energy</p>
+				</div>
+			</div>
+		  </div>
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		  <span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		  <span class="sr-only">Next</span>
+		</a>
+    </div>
+	<div>
+		<br/>
+		<br/>
+		<br/>
+		<h1 align="center" style="font-size:300%"><b> KONDA PRODUCTION </b></h1>
+	</div>
+	
+	<!-- selesai image slider -->
+	
 	<!-- include javascript kaya biasa lah ya :v -->
 	<script src="dist/js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

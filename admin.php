@@ -8,7 +8,10 @@
 ?>
 
 <!DOCTYPE html>
+<?php
+session_start();
 
+?>
 <html>
 
 <head>
@@ -50,20 +53,29 @@
 	  
 	<!-- selesai navigasi bar halaman -->
 	 
-    <div class="container">
-
-      <form class="form-signin" method="post" action="validasi.php">
-        <h2 class="form-signin-heading">Masuk sebagai admin</h2>
-        <label for="inputEmail" class="sr-only">Username</label>
-        <input type="username" id="inputUsername" name="inputUsername" class="form-control" placeholder="Username" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
+    <div class="container" style="padding: 100px 470px;">
+		<div class="form-group">
+			<h2 class="form-signin-heading" align="center" style="font-size : 220%"><b>Login Admin</b></h2>
+		</div>
+      <form class="form-signin" method="post" action="validasi.php"
+	  style="border: 3px solid #2fe526;border-radius: 10px;"id="form-signinAdmin">
+		
+		<div class="form-group">
+			<label for="inputEmail" class="sr-only">Username</label>
+			<input type="username" id="inputUsername" name="inputUsername" class="form-control" placeholder="Username" style="padding:10px;" required autofocus>
+        </div>
+		
+		<div class="form-group">
+			<label for="inputPassword" class="sr-only">Password</label>
+			<input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" style="padding:10px;" required>
+        </div>
+		
+		<div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-primary btn-block" type="submit">Masuk</button>
+        <button class="btn btn-primary btn-block" type="submit" style="background-color:#2fe526"><b>Masuk</b></button>
       </form>
 
     </div>
